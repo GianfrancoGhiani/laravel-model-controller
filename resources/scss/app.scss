@@ -1,0 +1,38 @@
+@use './partials/variables' as*;
+@import '~bootstrap/scss/bootstrap';
+
+body{
+    background-color: lighten($color: $main, $amount: 20);
+}
+.card{
+    cursor: pointer;
+    position: relative;
+    border-radius: .7rem;
+    overflow: hidden;
+    .details{
+        display: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        bottom: 0;
+        background-color: $layover;
+
+        font-weight: 700;
+        color: #fff;
+        padding: 1rem;
+        .name-sec{
+            font-weight: 400;
+            font-style: italic;
+            font-size: 80%;
+        }
+    }
+    &:hover .details{
+        display: block;
+
+    }
+    .card-img{
+        img{
+            max-width: 100%;
+        }
+    }
+}
